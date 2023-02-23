@@ -4,6 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>JwtAuthService</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
@@ -20,5 +21,10 @@
     <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
     <None Remove="System.IdentityModel.Tokens.Jwt" />
     <None Remove="Microsoft.IdentityModel.Tokens" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JwtAuthService.Common.Models\JwtAuthService.Common.Models.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>
